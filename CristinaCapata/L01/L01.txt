@@ -1,0 +1,10 @@
+Figma este o aplicație cloud ce permite colaborarea utilizatorilor în realizarea 
+de prototipuri pentru pagini web si nu numai.
+Aceasta permite utilizatorilor să creeze elemente vectoriale, să ordoneze elementele
+după bunul plac, dar oferă și bucăți de cod corespunzătoare. De asemenea, ea oferă 
+posibilitatea de a simula legăturile dintre interfețe din punctul de vedere al unui
+utilizator.
+Fiind o aplicație bazată pe ideea de colaborare, Figma oferă posibilitatea de a crea
+librării cu elemente de către un utilizator, care pot fi folosite ulterior de toți membrii 
+echipei.
+
