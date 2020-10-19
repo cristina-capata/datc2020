@@ -75,5 +75,28 @@ namespace datc_l03
             }
 
         }
+
+        public async Task<Google.Apis.Drive.v3.Data.File> Upload(string documentId="root")
+        {
+            var name = ($"{DateTime.UtcNow.ToString()}.txt");
+            var mimeType ="text";
+
+            var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+            {
+                Name = name,
+                MimeType = mimeType,
+                Parents = new[] { documentId }
+            };
+
+            FilesResource.CreateMediaUpload request;
+            FileStream stream=new FileStream("trial.txt", FileMode.Open, FileAccess.Read);
+            {
+                request = service.Files.Create(
+                    fileMetadata, stream, mimeType);
+                request.Fields = "id, name, parents, createdTime, modifiedTime, mimeType, thumbnailLink";
+                await request.UploadAsync();
+            }
+            return request.ResponseBody;
+        }
     }
 }
